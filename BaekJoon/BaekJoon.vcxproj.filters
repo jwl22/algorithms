@@ -21,5 +21,11 @@
     <ClCompile Include="Maximun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Digit N Sum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Self Number.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
