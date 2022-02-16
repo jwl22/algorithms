@@ -27,5 +27,8 @@
     <ClCompile Include="Self Number.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Repeat String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
