@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int factorial(int count, int sum); //±¸ÇöÇÒ ÇÊ¿ä ¾ø´Â ÇÔ¼öÁö¸¸ °øºÎÇÑ´Ù´Â »ý°¢À¸·Î »ý¼º
+int factorial(int count, int sum); //êµ¬í˜„í•  í•„ìš” ì—†ëŠ” í•¨ìˆ˜ì§€ë§Œ ê³µë¶€
 
 int main() {
 	string input;
