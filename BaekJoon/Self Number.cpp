@@ -19,7 +19,7 @@ int main() {
 	}
 
 	sort(sequence.begin(), sequence.end());	//함수 벡터 정렬
-	sequence.erase(unique(sequence.begin(), sequence.end()), sequence.end());	//unique로 중복 제거
+	sequence.erase(unique(sequence.begin(), sequence.end()), sequence.end());	//unique로 중복 제거.
 
 	for (int i = 1; i <= 10000; i++) {
 		if (find(sequence.begin(), sequence.end(), i) == sequence.end()) {
