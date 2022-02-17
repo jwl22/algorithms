@@ -30,5 +30,11 @@
     <ClCompile Include="Repeat String.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Count Word.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Find Fraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
