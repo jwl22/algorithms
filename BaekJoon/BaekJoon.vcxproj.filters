@@ -42,5 +42,8 @@
     <ClCompile Include="Snail.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ACM Hotel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
