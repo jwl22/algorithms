@@ -1,4 +1,3 @@
-from operator import index
 import sys
 input = sys.stdin.readline
 
