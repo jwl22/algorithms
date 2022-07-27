@@ -23,6 +23,7 @@ def sol():
             sorted_stack.rotate(-index)
             sorted_stack.popleft()
             sorted_stack.rotate(index)
+            # sorted_stack.remove(sorted_stack[index])
             if index >= 1:
                 index -= 1
             answer.append('-')
