@@ -33,19 +33,6 @@ for i in range(testcase_count):
                 queue.popleft()
                 M -= 1
                 result[i] += 1
-        # if M == 0:
-        #     for j in queue:
-        #         if queue[M] < j:
-        #             queue.rotate(-1)
-        #             M = len(queue)-1
-        #             break
-        #     if M == 0:
-        #         break
-        # elif queue[M] <= queue.popleft():
-        #     M -= 1
-        #     result[i] += 1
-        # else:
-        #     M -= 1
 
 for i in range(testcase_count):
     print(result[i])
