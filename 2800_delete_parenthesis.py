@@ -17,7 +17,6 @@ printline = set()  # 중복 제거 위한 집합 자료형 사용
 
 for i in range(len(p_set)):
     for j in combinations(p_set, i):
-        print(j)
         exp_clone = exp.copy()
         for a, b in j:
             exp_clone[a] = '('
