@@ -40,5 +40,4 @@ else:
             for j in i:
                 if not child[j]:
                     count += 1
-
 print(count)
