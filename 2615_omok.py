@@ -25,6 +25,8 @@ for y in range(size):
                     if count == 5:
                         if 0 <= nx + dx[i] < size and 0 <= ny + dy[i] < size and field[ny][nx] == field[ny + dy[i]][nx + dx[i]]:
                             break
+                        if 0 <= x - dx[i] < size and 0 <= y - dy[i] < size and field[y][x] == field[y - dy[i]][x - dx[i]]:
+                            break
                         print(field[y][x])
                         print(y+1, x+1)
                         exit()
