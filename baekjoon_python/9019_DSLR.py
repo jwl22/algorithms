@@ -21,22 +21,15 @@ def S(A):
 
 
 def L(A):
-    A = str(A)
-    if len(A) != 4:
-        A += '0'
-    else:
-        A = A[1:] + A[0]
-    A = int(A)
-    return A
+    f = A % 1000
+    b = A // 1000
+    return f*10 + b
 
 
 def R(A):
-    A = str(A)
-    while len(A) != 4:
-        A = '0'+A
-    A = A[-1] + A[:-1]
-    A = int(A)
-    return A
+    f = A % 10
+    b = A // 10
+    return f*1000 + b
 
 
 for _ in range(T):
