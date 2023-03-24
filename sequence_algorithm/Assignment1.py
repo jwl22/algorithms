@@ -1,4 +1,4 @@
-# 2018253082 이정우
+# DNA시퀀스를 RNA시퀀스로 바꾸는 코드이다.
 # python3(WIN: python) Assignment1.py test.txt 와 같이 사용한다.
 # 출력파일: assignment1_output.txt
 # DNA sequence가 아닐 시 터미널에 No DNA sequence 문구를 띄운다.
