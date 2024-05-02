@@ -165,13 +165,13 @@ while true
     tmp = zeros(20);
     for i=1:20
         for j=1:20
-            if i+1 <= 20 && j+1 <= 20
+            if i+1 <= 20 && j+1 <= 20 && randx == 1 && randy == 1
                 tmp(i+1,j+1) = tmp(i+1,j+1) + bel(i,j) * 1/3;
             end
-            if i+1 <= 20
+            if i+1 <= 20 && randx == 1
                 tmp(i+1,j) = tmp(i+1,j) + bel(i,j) * 1/3;
             end
-            if j+1 <= 20
+            if j+1 <= 20 && randy == 1
                 tmp(i,j+1) = tmp(i,j+1) + bel(i,j) * 1/3;
             end
             % if i+1 <= 20 && j+1 <= 20
