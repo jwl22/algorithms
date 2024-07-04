@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.cpp": "cpp",
+        "*.cs": "csharp",
+        "array": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "map": "c",
+        "functional": "c"
+    }
+}
