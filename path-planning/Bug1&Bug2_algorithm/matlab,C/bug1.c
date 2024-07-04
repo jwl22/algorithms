@@ -8,6 +8,7 @@
 #define BUG 3
 
 int MAP[5][5] = {0,};
+FILE *fp;
 
 int MAPPlot(int MAP[5][5]);
 int* goForward(int *bug);
@@ -15,10 +16,19 @@ int motionToGo(int *bug, int *goal);
 int* boundaryFollowing1(int *bug, int *goal);
 int boundaryFollowing2(int *bug, int *shortest_path);
 
-void dosclear();
-void dospause();
+void dosclear(){
+    // system("cls"); // 윈도우
+    system("clear"); // 리눅스
+}
+
+void dospause(){
+    // Sleep(500); // 윈도우
+    sleep(1); // 리눅스
+}
 
 int main() {
+    fp = fopen("bug_history.txt", "w");
+
     // obs
     int obs_pos[3][2] = {{2,2},{3,2},{1,2}};
     for (int i = 0; i < 3; i++) {
@@ -36,12 +46,11 @@ int main() {
     // Bug 1 Algorithm
     int col = 0; // For Check Collision
     int shortest_path[2] = {0,0};
-
     dosclear();
     MAPPlot(MAP);
+    fprintf(fp, "%d %d\n", bug_pos[0], bug_pos[1]);
     dospause();
-
-
+    
     while (1) {
         if (col == 0) {
             col = motionToGo(bug_pos, goal_pos);
@@ -104,7 +113,6 @@ int* boundaryFollowing1(int *bug, int *goal) {
             shortest_path[1] = bug[1];
         }
         printf("shortest_path: %d, %d\n", shortest_path[0], shortest_path[1]);
-        dospause();
         
         // 1-step
         int *prevBug = malloc(3 * sizeof(int));
@@ -115,6 +123,9 @@ int* boundaryFollowing1(int *bug, int *goal) {
         int *result = goForward(bug); // 전진
         bug[0] = result[0];
         bug[1] = result[1];
+
+        fprintf(fp, "%d %d\n", bug[0], bug[1]);
+        dospause();
 
         MAP[prevBug[0]][prevBug[1]] = LAND; // update the MAP
         MAP[bug[0]][bug[1]] = BUG;
@@ -132,6 +143,7 @@ int* boundaryFollowing1(int *bug, int *goal) {
             break;
         }
     }
+    
     dosclear();
     MAPPlot(MAP);
     printf("shortest_path: %d, %d\n", shortest_path[0], shortest_path[1]);
@@ -176,6 +188,7 @@ int boundaryFollowing2(int *bug, int *shortest_path) {
 
         dosclear();
         MAPPlot(MAP);
+        fprintf(fp, "%d %d\n", bug[0], bug[1]);
         printf("shortest_path: %d, %d\n", shortest_path[0], shortest_path[1]);
         dospause();
 
@@ -222,11 +235,12 @@ int motionToGo(int *bug, int *goal) {
     } else { // Update the MAP.
         MAP[prevBug[0]][prevBug[1]] = LAND;
         MAP[bug[0]][bug[1]] = BUG;
-    }
 
-    dosclear();
-    MAPPlot(MAP);
-    dospause();
+        dosclear();
+        MAPPlot(MAP);
+        fprintf(fp, "%d %d\n", bug[0], bug[1]);
+        dospause();
+    }
 
     return col;
 }
@@ -256,14 +270,4 @@ int* goForward(int *bug) {
     }
 
     return result;
-}
-
-void dosclear(){
-    // system("cls"); // 윈도우
-    system("clear"); // 리눅스
-}
-
-void dospause(){
-    // Sleep(500); // 윈도우
-    sleep(1); // 리눅스
 }
